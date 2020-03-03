@@ -7,7 +7,6 @@
 
 unsigned char* getData(unsigned char* dataUsers, unsigned int address);
 void inputData(unsigned char* arrayInput, int counter, unsigned char getKey);
-int checkData(unsigned char checkKey, unsigned char* dataUser, int counterId, int address);
 unsigned int compareData(unsigned char* arrayInput, unsigned char* arrayData, unsigned int shift);
 
 void main(void)
@@ -108,13 +107,6 @@ unsigned char* getData(unsigned char* dataUsers, unsigned int address) {
 	return dataUsers;
 }
 
-int checkData(unsigned char checkKey, unsigned char* dataUser, int counterId, int address)
-{
-	if (dataUser[counterId + address] == (char)checkKey) {
-		return 0;
-	}
-	return 1;
-}
 
 void inputData(unsigned char* arrayInput, int counter, unsigned char getKey)
 {
